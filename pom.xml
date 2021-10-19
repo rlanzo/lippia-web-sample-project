@@ -93,6 +93,7 @@
 				<crowdar.driverHub>http://localhost:4444/wd/hub</crowdar.driverHub>
 			</properties>
 		</profile>
+
 		<profile>
 			<id>secuencial</id>
 			<properties>
@@ -107,11 +108,6 @@
 			</properties>
 		</profile>
 
-		<profile>
-			<id>secuencial</id>
-			<properties/>
-
-		</profile>
 	</profiles>
 	<dependencies>
 		<dependency>
