@@ -1,7 +1,7 @@
 Feature: como usuario, quiero loguearme a la aplicacion
 
-  @Smoke @romi
-  Scenario Outline: El usuario navega a "Sign in"
+  @Smoke
+  Scenario Outline: El usuario hace el login OK"
     Given el usuario navega a la web de automation practice
     When el usuario pulsa el boton "Sign in"
     And completar correo electronico <usuario> y contraseña <password> e ingresar
