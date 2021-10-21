@@ -23,4 +23,5 @@ public class EjemploPracticaService extends ActionManager {
         Assert.assertTrue(isVisible(EjemploPracticaConstants.INPUT_ADDRESS_XPATH));
         waitVisibility(EjemploPracticaConstants.H1_TITULO_XPATH);
         Assert.assertEquals(getText(EjemploPracticaConstants.H1_TITULO_XPATH), "AUTHENTICATION", "No se encuentra el titulo");
-    }}
+    }
+}

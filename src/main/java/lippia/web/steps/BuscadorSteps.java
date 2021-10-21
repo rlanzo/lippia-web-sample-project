@@ -12,9 +12,26 @@ public class BuscadorSteps {
         BuscadorServices.clickLupita();
 
     }
-        @Then("el usuario ve en pantalla los resultados de la busqueda (.*)")
-        public void visualizarResultadoBusqueda(String mensaje) throws InterruptedException {
-            Assert.assertEquals(BuscadorServices.verificarBusquedaOk(), mensaje);
-        }
+
+    @When("el usuario va selecciona ordenar por precio mas bajo (.*)")
+    public void usuarioSeleccionaPrecioMasBajo(String PrecioBajo) {
+        BuscadorServices.clickOptionPrecioMasBajo(PrecioBajo);
+
+
     }
+
+    @Then("el usuario ve en pantalla los resultados de la busqueda (.*)")
+    public void visualizarResultadoBusqueda(String mensaje) throws InterruptedException {
+        Assert.assertEquals(BuscadorServices.verificarBusquedaOk(), mensaje);
+    }
+
+    @Then("el usuario ve en pantalla correctamente ordenado")
+    public void visualizarOrdendadoPrecio() {
+        Assert.assertTrue(BuscadorServices.verificaPrecio1(),"No se ve el precio1");
+        Assert.assertTrue(BuscadorServices.verificaPrecio2(),"No se ve el precio2");
+        Assert.assertTrue(BuscadorServices.verificaPrecio3(),"No se ve el precio3");
+        Assert.assertTrue(BuscadorServices.verificaPrecio4(),"No se ve el precio4");
+    }
+}
+
 
